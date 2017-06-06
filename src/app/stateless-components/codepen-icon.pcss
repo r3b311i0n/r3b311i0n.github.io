@@ -1,0 +1,24 @@
+.codepen-root {
+    opacity: 0.6;
+    transition: transform 100ms, opacity 100ms;
+}
+
+.codepen-root:hover {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+}
+
+.codepen-box {
+    animation: box-spin 750ms ease-out 150ms;
+}
+
+@keyframes box-spin {
+    from {
+        transform: scaleX(5) scaleY(5);
+        transform-origin: 50% 50%;
+    }
+    to {
+        transform: scaleX(1) scaleY(1);
+        transform-origin: 50% 50%;
+    }
+}
