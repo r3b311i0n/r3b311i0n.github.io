@@ -4,22 +4,46 @@ import {About} from './about.component';
 import {Blog} from './blog.component';
 import NavBtn from './stateless-components/nav-btn';
 
-// todo: Go back to last location on back arrow click.
-
 interface IAppState {
     showAbout: boolean;
 }
+
+// todo: Disable article link if already on its page.
 
 export class App extends React.Component<{}, IAppState> {
     constructor(props: any) {
         super(props);
 
+        this.currentArticleLocation = location.pathname !== '/about' ? location.pathname : '/';
         this.state = {showAbout: (location.pathname === '/about')};
     }
+
+    private currentArticleLocation: string;
 
     private handleNavBtnClick = () => this.setState({
         showAbout: !this.state.showAbout
     });
+
+    public componentDidMount() {
+        window.onpopstate = () => {
+            if (location.pathname === '/about') {
+                this.setState({
+                    showAbout: true
+                });
+            }
+            else {
+                this.setState({
+                    showAbout: false
+                });
+            }
+        };
+    }
+
+    public componentDidUpdate() {
+        if (location.pathname !== '/about') {
+            this.currentArticleLocation = location.pathname;
+        }
+    }
 
     public render(): JSX.Element {
         return (
@@ -31,7 +55,7 @@ export class App extends React.Component<{}, IAppState> {
                     </Switch>
                 </div>
                 <div onClick={this.handleNavBtnClick}>
-                    <Link to={(this.state.showAbout) ? '/' : '/about'}>{NavBtn()}</Link>
+                    <Link to={(this.state.showAbout) ? this.currentArticleLocation : '/about'}>{NavBtn()}</Link>
                 </div>
             </div>
         );
