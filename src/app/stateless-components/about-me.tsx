@@ -5,7 +5,7 @@ import './about-me.pcss';
 // todo: Look into 4k media query.
 
 //noinspection TsLint
-const AboutMe = (currAnime: string, currBook: string, currGame: string, currMusic: string) => (
+const AboutMe = (currAnime: string, currBook: string, currGame: string, currMusic: string, currTV: string) => (
     <section>
         <div className="about-me-root">
             <span className="about-me-description">Hi, I'm Amal. I make things that run in computers.
@@ -22,15 +22,17 @@ const AboutMe = (currAnime: string, currBook: string, currGame: string, currMusi
                         <ul>
                             <li><a href="https://neovim.io" target="_blank">NeoVim</a></li>
                             <li><a href="https://www.sublimetext.com" target="_blank">Sublime{'\u0020'}Text</a></li>
+                            <li><a href="https://code.visualstudio.com/"
+                                   target="_blank">Visual{'\u0020'}Studio{'\u0020'}Code</a>
+                            </li>
                         </ul>
                     </div>
                     <div>Graphics{'\u0020'}<sub>⮧</sub>
                         <ul>
-                            <li>
-                                <a href="http://www.inkscape.org" target="_blank">Inkscape</a>{'\u0020'}⟶{'\u0020'}
-                                <a href="https://github.com/svg/svgo" target="_blank">SVGO</a>
-                            </li>
-                            <li><a href="https://www.gimp.org" target="_blank">GIMP</a></li>
+                            <li><a href="https://affinity.serif.com/en-gb/"
+                                   target="_blank">Affinity{'\u0020'}Designer</a></li>
+                            <li><a href="http://www.inkscape.org" target="_blank">Inkscape</a></li>
+                            <li><a href="https://krita.org/en/" target="_blank">Krita</a></li>
                             <li><a href="https://www.adobe.com/products/photoshop.html" target="_blank">Photoshop</a>
                             </li>
                         </ul>
@@ -67,6 +69,9 @@ const AboutMe = (currAnime: string, currBook: string, currGame: string, currMusi
                             </li>
                             <li>
                                 <a target="_blank" href="https://www.wikiwand.com/en/PHP">PHP</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.wikiwand.com/en/Python_(programming_language)">Python</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://www.wikiwand.com/en/TypeScript">TypeScript</a>
@@ -198,6 +203,12 @@ const AboutMe = (currAnime: string, currBook: string, currGame: string, currMusi
                                 </a>
                             </li>
                             <li><a
+                                href="http://store.steampowered.com/app/367500/Dragons_Dogma_Dark_Arisen"
+                                target="_blank"
+                            >
+                                Dragon's{'\u0020'}Dogma:{'\u0020'}Dark{'\u0020'}Arisen
+                            </a></li>
+                            <li><a
                                 href="http://store.steampowered.com/app/236850/Europa_Universalis_IV"
                                 target="_blank"
                             >
@@ -225,6 +236,10 @@ const AboutMe = (currAnime: string, currBook: string, currGame: string, currMusi
                             >Battle{'\u0020'}Royale
                             </a>
                             </li>
+                            <li>Crows{'\u0020'}Zero{'\u0020'}⟶{'\u0020'}
+                                <a target="_blank" href="http://www.imdb.com/title/tt1016290">1</a>,{'\u0020'}
+                                <a target="_blank" href="http://www.imdb.com/title/tt1232831">2</a>
+                            </li>
                             <li><a target="_blank" href="http://www.imdb.com/title/tt0137523/">Fight{'\u0020'}Club</a>
                             </li>
                             <li><a target="_blank" href="http://www.imdb.com/title/tt0110912/">Pulp{'\u0020'}Fiction</a>
@@ -247,6 +262,7 @@ const AboutMe = (currAnime: string, currBook: string, currGame: string, currMusi
                             <li><a target="_blank" href="http://www.gorillaz.com">Gorillaz</a></li>
                             <li><a target="_blank" href="http://www.grimesmusic.com">Grimes</a></li>
                             <li><a target="_blank" href="http://lanadelrey.com">Lana{'\u0020'}Del{'\u0020'}Rey</a></li>
+                            <li><a target="_blank" href="https://lorde.co.nz">Lorde</a></li>
                             <li>
                                 <a
                                     target="_blank"
@@ -268,6 +284,26 @@ const AboutMe = (currAnime: string, currBook: string, currGame: string, currMusi
                             <li><a target="_blank" href="http://www.whitestripes.com">The{'\u0020'}White{'\u0020'}Stripes</a>
                             </li>
                             <li><a target="_blank" href="http://vocaloid.wikia.com/wiki/Vocaloid_Wiki">Vocaloid</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        TV{'\u0020'}<sub>⮧</sub>{'\u0020'}<sup>Currently{'\u0020'}Watching{'\u0020'}⟶{'\u0020'}<span>
+                        {currTV}
+                        </span></sup>
+                        <ul>
+                            <li><a target="_blank"
+                                   href="http://www.imdb.com/title/tt1702042">An{'\u0020'}Idiot{'\u0020'}Abroad</a></li>
+                            <li><a target="_blank" href="http://www.imdb.com/title/tt0903747">Breaking{'\u0020'}Bad</a>
+                            </li>
+                            <li><a target="_blank" href="http://www.imdb.com/title/tt0445114">Extras</a></li>
+                            <li><a target="_blank" href="http://www.imdb.com/title/tt2100976">Impractical{'\u0020'}Jokers</a>
+                            </li>
+                            <li><a target="_blank" href="http://www.imdb.com/title/tt0380136">QI</a></li>
+                            <li><a target="_blank"
+                                   href="http://www.imdb.com/title/tt4574334">Stranger{'\u0020'}Things</a></li>
+                            <li><a target="_blank" href="http://www.imdb.com/title/tt0290978">The{'\u0020'}Office</a>
+                            </li>
+                            <li><a target="_blank" href="http://www.imdb.com/title/tt0306414">The{'\u0020'}Wire</a></li>
                         </ul>
                     </div>
                 </div>

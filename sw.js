@@ -1,4 +1,4 @@
-importScripts('workbox-sw.prod.v2.0.0.js');
+importScripts('workbox-sw.prod.v2.0.1.js');
 
 /**
  * DO NOT EDIT THE FILE MANIFEST ENTRY
@@ -20,7 +20,7 @@ importScripts('workbox-sw.prod.v2.0.0.js');
 const fileManifest = [
   {
     "url": "bundle.js",
-    "revision": "bfc7116b332e0ddf7fb71fbe22d5aaf2"
+    "revision": "be36c7100e34dfb7e0d8a79c0d309967"
   },
   {
     "url": "styles.css",
