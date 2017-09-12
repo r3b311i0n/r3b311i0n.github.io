@@ -24,7 +24,7 @@ const fileManifest = [
   },
   {
     "url": "styles.css",
-    "revision": "bccccee79b1a55cba2358c99d6daaa4e"
+    "revision": "b6639e3264b886173014e9b06c4d0448"
   }
 ];
 
