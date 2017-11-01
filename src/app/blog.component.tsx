@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 import * as React from 'react';
 import Scrollbars from 'react-custom-scrollbars';
-import {presets, spring, StaggeredMotion} from 'react-motion';
+import {spring, StaggeredMotion} from 'react-motion';
 import {Link, Redirect, Route, Switch} from 'react-router-dom';
 
 import {Article} from './article.component';
@@ -14,7 +14,7 @@ const database = firebase.database();
 
 const staggerStyles = (prevInterpolatedStyles: any) => prevInterpolatedStyles.map((_: { h: number }, i: number) => {
     return i === 0
-        ? {h: spring(0, presets.stiff)}
+        ? {h: spring(1, {stiffness: 200, damping: 23})}
         : {h: spring(prevInterpolatedStyles[i - 1].h)};
 });
 
@@ -86,7 +86,7 @@ export class Blog extends React.Component<{}, IBlogState> {
                 // Populate render() with Route list.
                 this.setState({articleRoutes: routes});
                 // Push style objects into array for StaggerMotion of Blog List.
-                this.blogLinkList.forEach(() => this.defaultStyles.push({h: -640}));
+                this.blogLinkList.forEach(() => this.defaultStyles.push({h: 0}));
                 this.setState({
                     willAnimateInBlogLinkList: true,
                 });
@@ -100,7 +100,6 @@ export class Blog extends React.Component<{}, IBlogState> {
         window.addEventListener('resize', this.setWindowHeight);
     }
 
-    //noinspection JSMethodCanBeStatic
     public componentWillUnmount() {
         window.removeEventListener('resize', this.setWindowHeight);
     }
@@ -128,7 +127,7 @@ export class Blog extends React.Component<{}, IBlogState> {
                                             {interpolatingStyles.map((style: { h: number }, i: number) =>
                                                 <div key={i}>
                                                     <div
-                                                        style={{transform: `translateX(${style.h}px)`}}
+                                                        style={{opacity: style.h}}
                                                     >
                                                         {this.blogLinkList[i]}
                                                     </div>

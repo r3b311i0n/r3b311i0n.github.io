@@ -7,11 +7,12 @@ import SocialIcon from './stateless-components/social-icon';
 //    Social links component.
 
 // Seven objects for seven social links representing initial x coordinates.
-const defaultStyles = [{h: -768}, {h: -768}, {h: -768}, {h: -768}, {h: -768}, {h: -768}, {h: -768}];
+const motionObject = {h: 0};
+const defaultStyles = [motionObject, motionObject, motionObject, motionObject, motionObject, motionObject, motionObject];
 
 const staggerStyles = (prevInterpolatedStyles: any) => prevInterpolatedStyles.map((_: { h: number }, i: number) => {
     return i === 0
-        ? {h: spring(0, presets.stiff)}
+        ? {h: spring(1, presets.gentle)}
         : {h: spring(prevInterpolatedStyles[i - 1].h)};
 });
 
@@ -33,7 +34,7 @@ export default class Social extends React.Component<{}, {}> {
                                 <div key={i}>
                                     <div
                                         className="social-motion-block"
-                                        style={{transform: `translateX(${style.h}px)`}}
+                                        style={{opacity: style.h}}
                                     >
                                         {SocialIcon[i]}
                                     </div>
