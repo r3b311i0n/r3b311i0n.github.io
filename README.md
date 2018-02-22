@@ -5,6 +5,6 @@ GitHub Pages repo for my blog.
 r3b311i0n.github.io
 ```
 
-> Dev source can be found [here][gitlab].
+> Dev source can be found [here][sauce].
 
-[gitlab]: https://gitlab.com/r3b311i0n/amal-karunarathna-portfolio "GitLab"
+[sauce]: https://github.com/r3b311i0n/amal-karunarathna-portfolio "Source"
